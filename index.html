@@ -1,0 +1,67 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA// tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <h1>Payal<span>//</span>DSA-Tracker</h1>
+      <span class="tag">137 problems · 11 topics</span>
+    </div>
+    <div class="streak-badge">🔥 <b id="streakNum">0</b> day streak</div>
+  </header>
+
+  <div class="pod" id="podCard">
+    <div class="pod-prompt">$ next-problem<span class="cursor"></span></div>
+    <div class="pod-body">
+      <div class="pod-info">
+        <span class="topic-chip" id="podTopic">—</span>
+        <h2 id="podName">All problems solved 🎉</h2>
+      </div>
+      <div class="pod-actions" id="podActions"></div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="num" id="solvedCount">0 <small>/ 137 solved</small></div>
+      <div class="label">Overall progress</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <div class="stat-card heat-card">
+      <div class="label">Last 14 weeks</div>
+      <div class="heatgrid" id="heatGrid"></div>
+      <div class="heat-foot">
+        <span id="heatSummary">0 solved this period</span>
+        <span class="heat-legend">less <span class="heatcell"></span><span class="heatcell" style="background:var(--amber-dim);border-color:var(--amber-dim)"></span><span class="heatcell" style="background:var(--amber);border-color:var(--amber)"></span> more</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="search-box"><input type="text" id="searchInput" placeholder="Search problems…"></div>
+    <select id="statusFilter">
+      <option value="all">All status</option>
+      <option value="solved">Solved</option>
+      <option value="unsolved">Unsolved</option>
+    </select>
+  </div>
+
+  <div id="topicsContainer"></div>
+
+  <footer>data stored locally in your browser · nothing leaves this device</footer>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
